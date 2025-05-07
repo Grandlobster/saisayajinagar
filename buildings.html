@@ -51,110 +51,67 @@
             box-shadow: 0 15px 25px rgba(0,0,0,0.2);
         }
         .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(6px);
-    background: rgba(0, 0, 0, 0.4);
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-
-.modal-content {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(15px);
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 500px;
-    width: 90%;
-    max-height: 80%;
-    overflow-y: auto;
-    position: relative;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    animation: fadeIn 0.4s ease;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 30px;
-    cursor: pointer;
-    font-size: 20px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.close:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: rotate(90deg);
-}
-
-.modal-content h2 {
-    margin-top: 0;
-    font-size: 24px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-.modal-content p {
-    margin: 8px 0;
-    font-size: 16px;
-}
-
-.modal-content h3 {
-    margin-top: 20px;
-    font-size: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 10px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    font-size: 14px;
-}
-
-th {
-    background: rgba(0, 0, 0, 0.1);
-    font-weight: 600;
-}
-
-tr:nth-child(even) td {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-tr:hover td {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #f5f5f5;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        @media (max-width: 600px) {
+            .scroll-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            .building {
+                flex: 0 0 auto;
+                width: 50%;
+                height: auto;
+            }
+            .building img {
+                height: 33.33vh;  /* Adjust image height for mobile */
+                object-fit: cover;  /* Ensure the image is properly scaled */
+            }
+        }
     </style>
 </head>
 <body>
@@ -189,35 +146,17 @@ tr:hover td {
 
 <script>
     const container = document.getElementById('buildingsContainer');
-    container.style.width = `${container.children.length * 100}vw`;  // dynamic width
+    if (window.innerWidth > 600) {
+        container.style.width = `${container.children.length * 100}vw`;
+    } else {
+        container.style.width = '100%';
+    }
     let scrollIndex = 0;
 
     const buildingData = {
-    A: { 
-        secretary: "Alice", 
-        chairman: "Alan", 
-        treasurer: "Amanda", 
-        residents: [
-            { flat: '101', owner: 'Owner A1' },
-            { flat: '102', owner: 'Owner A2' },
-            { flat: '103', owner: 'Owner A3' }
-        ]
-    },
-    B: { 
-        secretary: "Brian", 
-        chairman: "Bella", 
-        treasurer: "Ben", 
-        residents: [
-            { flat: '201', owner: 'Owner B1' },
-            { flat: '202', owner: 'Owner B2' },
-            { flat: '203', owner: 'Owner B3' }
-        ]
-    },
-    E: { 
-        secretary: "Mr. Sudhir Kadam", 
-        chairman: "Mr. M. M. LAWANDE", 
-        treasurer: "Mr.Yogesh Kulkarni", 
-        residents: [
+        A: { secretary: "Alice", chairman: "Alan", treasurer: "Amanda", residents: [{ flat: '101', owner: 'Owner A1' }, { flat: '102', owner: 'Owner A2' }, { flat: '103', owner: 'Owner A3' }] },
+        B: { secretary: "Brian", chairman: "Bella", treasurer: "Ben", residents: [{ flat: '201', owner: 'Owner B1' }, { flat: '202', owner: 'Owner B2' }, { flat: '203', owner: 'Owner B3' }] },
+        E: { secretary: "Secretary E", chairman: "Chairman E", treasurer: "Treasurer E", residents: [
             { flat: '1', owner: 'Mr. M. M. LAWANDE' },
             { flat: '2', owner: 'Mr. M. M. LAWANDE' },
             { flat: '3', owner: 'Mrs. S. S. SURDIKAR' },
@@ -227,19 +166,16 @@ tr:hover td {
             { flat: '7', owner: 'Mr. S. R. BHATKHANDE' },
             { flat: '8', owner: 'Mr. S. P. KHATAVKAR' },
             { flat: '9', owner: 'Mr. & Mrs. GUMPHALWAR' },
-            { flat: '10', owner: 'Sunita Pandurang Shevkari' },
+            { flat: '10', owner: 'Sunita Pandurang Shevkan' },
             { flat: '11', owner: 'Mr. S. M. OGALE' },
             { flat: '12', owner: 'Mr. S. G. KADAM' },
-            { flat: '13', owner: 'Mrs. V. S. BHATKHANDE' },
+            { flat: '13', owner: 'Mr. S. R. LAKHE' },
             { flat: '14', owner: 'Mr. S. P. KULKARNI' },
-            { flat: '15', owner: 'B. D. SUTAR' },
-            { flat: '16', owner: 'Mr.Chavan' }
-            
-        ]
-    }
-    // Add other building data as needed...
-};
-
+            { flat: '15', owner: 'Perfect Pest Cont' },
+            { flat: '16', owner: 'B. D. SUTAR' },
+            { flat: '17', owner: 'Miss M. Oza' }
+        ] }
+    };
 
     window.addEventListener('wheel', (e) => {
         if (window.innerWidth > 600) {
