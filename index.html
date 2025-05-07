@@ -453,28 +453,27 @@
         <div class="u-container-layout u-container-layout-1">
           <h2 class="u-text u-text-default u-text-1">आमच्याशी संपर्क साधा </h2>
           <div class="u-form u-form-1">
-            <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-13 u-form-vertical u-inner-form" style="padding: 0px;" source="email" name="form-2">
+           <form name="contact-form" method="POST" data-netlify="true" class="u-clearfix u-form-spacing-13 u-form-vertical u-inner-form" style="padding: 0px;">
               <div class="u-form-group u-form-name">
                 <label for="name-da97" class="u-label">नाव</label>
-                <input type="text" placeholder="आपले नाव प्रविष्ट करा" id="name-da97" name="name" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10" required="">
+                <input type="text" placeholder="आपले नाव प्रविष्ट करा" id="name-da97" name="name" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10" required>
               </div>
               <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-2">
                 <label for="phone-10f2" class="u-label">फोन</label>
-                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="तुमचा फोन एंटर करा (उदा. +91 855552675)" id="phone-10f2" name="phone" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10" required="">
+                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="तुमचा फोन एंटर करा (उदा. +91 855552675)" id="phone-10f2" name="phone" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10" required>
               </div>
               <div class="u-form-email u-form-group u-form-partition-factor-2">
                 <label for="email-da97" class="u-label">ईमेल</label>
-                <input type="email" placeholder="एक वैध ईमेल पत्ता प्रविष्ट करा" id="email-da97" name="email" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10" required="">
+                <input type="email" placeholder="एक वैध ईमेल पत्ता प्रविष्ट करा" id="email-da97" name="email" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10" required>
               </div>
               <div class="u-form-group u-form-submit">
-                <a href="#" class="u-active-palette-1-base u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-2-base u-radius-10 u-btn-1">सबमिट करा</a>
-                <input type="submit" value="submit" class="u-form-control-hidden">
+                <button type="submit" class="u-active-palette-1-base u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-base u-palette-2-base u-radius-10 u-btn-1">सबमिट करा</button>
               </div>
-              <div class="u-form-send-message u-form-send-success"> धन्यवाद! तुमचा संदेश पाठवला गेला आहे. </div>
-              <div class="u-form-send-error u-form-send-message"> तुमचा संदेश पाठवण्यात अक्षम. कृपया त्रुटींचे निराकरण करा आणि पुन्हा प्रयत्न करा. </div>
-              <input type="hidden" value="" name="recaptchaResponse">
-              <input type="hidden" name="formServices" value="ffd626c2-6715-58a7-8807-a734e8c66305">
+              <div class="u-form-send-message u-form-send-success">धन्यवाद! तुमचा संदेश पाठवला गेला आहे.</div>
+              <div class="u-form-send-error u-form-send-message">तुमचा संदेश पाठवण्यात अक्षम. कृपया त्रुटींचे निराकरण करा आणि पुन्हा प्रयत्न करा.</div>
+              <input type="hidden" name="form-name" value="contact-form">
             </form>
+            
           </div>
           <p class="u-text u-text-grey-50 u-text-2">पुनर्विकास प्रक्रियेबाबत कोणत्याही शंका, सूचना किंवा सहकार्याच्या संधींसाठी, मोकळ्या मनाने आमच्याशी संपर्क साधा: </p>
         </div>
