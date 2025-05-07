@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Society Blog | Updates</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      background-image: url('/images/bvb-min.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #333;
+    }
+
+    .blog-container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .blog-title {
+      color: rgb(160, 0, 64);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .blog-meta {
+      color: #666;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .blog-content {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .video-section, .pdf-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    iframe {
+      max-width: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+
+    .pdf-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: rgb(160, 0, 64);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .pdf-button:hover {
+      background-color: rgb(130, 0, 50);
+    }
+
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 20px;
+      }
+
+      .blog-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blog-container">
+    <h1 class="blog-title">Society Redevelopment Update</h1>
+    <div class="blog-meta">Posted on April 4, 2025 | By Admin</div>
+
+    <div class="blog-content">
+      <p>
+        We are happy to share that the redevelopment proposal has reached its second stage. This includes approvals from municipal authorities and the architect’s feasibility study.
+      </p>
+      <p>
+        The following video explains everything from the design concept to the new features being proposed for all residents.
+      </p>
+    </div>
+
+    <div class="video-section">
+      <h3 style="color: rgb(38, 44, 57);">Watch Our Redevelopment Proposal Walkthrough</h3>
+      <iframe width="700" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="YouTube video" allowfullscreen></iframe>
+    </div>
+
+    <div class="pdf-section">
+      <h3 style="color: rgb(38, 44, 57); margin-top: 40px;">Download Official Documents</h3>
+      <a href="/pdfs/feasibility-report.pdf" class="pdf-button" target="_blank">📄 Feasibility Report</a>
+    </div>
+  </div>
+
+</body>
+</html>

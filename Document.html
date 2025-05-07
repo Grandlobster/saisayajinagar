@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Documents</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: rgb(38, 44, 57);
+    }
+
+    .documents-section {
+      background-image: url('/images/bvb-min.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .documents-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      z-index: -1;
+    }
+
+    .documents-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: rgb(160, 0, 64);
+      text-transform: uppercase;
+    }
+
+    .documents-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .document-category {
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .document-category input[type="checkbox"] {
+      display: none;
+    }
+
+    .document-category label {
+      display: block;
+      padding: 18px 24px;
+      background-color: rgb(160, 0, 64);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .document-category label:hover {
+      background-color: rgb(130, 0, 50);
+    }
+
+    .doc-items {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: white;
+      padding: 0 24px;
+    }
+
+    .document-category input[type="checkbox"]:checked ~ .doc-items {
+      max-height: 500px;
+      padding: 20px 24px;
+    }
+
+    .doc-items a {
+      display: block;
+      padding: 10px 0;
+      color: rgb(38, 44, 57);
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      transition: color 0.2s;
+    }
+
+    .doc-items a:hover {
+      color: rgb(160, 0, 64);
+    }
+
+    @media (max-width: 768px) {
+      .documents-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="documents-section">
+    <h2 class="documents-title"> Documents</h2>
+    <div class="documents-container">
+
+      <div class="document-category">
+        <input type="checkbox" id="feasibility" />
+        <label for="feasibility">📝 Feasibility Report</label>
+        <div class="doc-items">
+          <a href="#">Feasibility Report Phase 1.pdf</a>
+          <a href="#">Feasibility Summary.docx</a>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <input type="checkbox" id="individual-flats" />
+        <label for="individual-flats">🏠 Individual Flat Records</label>
+        <div class="doc-items">
+          <a href="#">Flat A101 Records.pdf</a>
+          <a href="#">Flat B203 Records.pdf</a>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <input type="checkbox" id="conveyance" />
+        <label for="conveyance">✉️ Conveyance Deed & Property Card</label>
+        <div class="doc-items">
+          <a href="DEED  OF  CONVEYANCE.pdf">Conveyance_Deed_Main.pdf</a>
+          <a href="#">Property_Card_2024.jpg</a>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <input type="checkbox" id="consent" />
+        <label for="consent">📄 Consent Letters</label>
+        <div class="doc-items">
+          <a href="#">Consent_FlatOwners.pdf</a>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <input type="checkbox" id="rfp" />
+        <label for="rfp">📄 RFP (Proposal Request)</label>
+        <div class="doc-items">
+          <a href="#">RFP_Builder_Offer.pdf</a>
+        </div>
+      </div>
+
+      <div class="document-category">
+        <input type="checkbox" id="712" />
+        <label for="712">📄 7/12 Extract</label>
+        <div class="doc-items">
+          <a href="#">712_Extract_Karvenagar_2024.pdf</a>
+        </div>
+      </div>
+      <div class="document-category">
+        <input type="checkbox" id="maps" />
+        <label for="maps">🗺️ Maps</label>
+        <div class="doc-items">
+          <a href="plot_demarcation.pdf">Plot demarcation</a>
+          <a href="Corp_Revised_Plan_2016.pdf">Corporation Revised Plan </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
