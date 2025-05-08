@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>Netlify Contact Form Test</title>
+</head>
+<body>
+  <h1>संपर्क फॉर्म</h1>
+
+  <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact-form">
+    
+    <!-- Honeypot field (hidden from humans) -->
+    <p hidden>
+      <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+    </p>
+
+    <p>
+      <label>नाव:
+        <input type="text" name="name" placeholder="आपले नाव प्रविष्ट करा" required>
+      </label>
+    </p>
+
+    <p>
+      <label>फोन:
+        <input type="tel" name="phone" placeholder="तुमचा फोन नंबर" required>
+      </label>
+    </p>
+
+    <p>
+      <label>ईमेल:
+        <input type="email" name="email" placeholder="तुमचा ईमेल" required>
+      </label>
+    </p>
+
+    <p>
+      <button type="submit">सबमिट करा</button>
+    </p>
+  </form>
+
+  <p id="success-message" style="display:none; color: green;">धन्यवाद! तुमचा संदेश पाठवला गेला आहे.</p>
+  <p id="error-message" style="display:none; color: red;">तुमचा संदेश पाठवण्यात अक्षम. कृपया पुन्हा प्रयत्न करा.</p>
+</body>
+</html>
