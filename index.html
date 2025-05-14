@@ -454,20 +454,29 @@
           <h2 class="u-text u-text-default u-text-1">आमच्याशी संपर्क साधा </h2>
 	
           <div class="u-form u-form-1">
-	<form name="contact-form" method="POST" data-netlify="true">
+	<form name="contact-form" method="POST" data-netlify="true" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 600px; margin: auto;">
   <input type="hidden" name="form-name" value="contact-form">
 
-  <label for="name">नाव</label>
-  <input type="text" id="name" name="name" required>
+  <div style="flex: 1 1 45%;">
+    <label for="name">नाव</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc;">
+  </div>
 
-  <label for="phone">फोन</label>
-  <input type="tel" id="phone" name="phone" required>
+  <div style="flex: 1 1 45%;">
+    <label for="phone">फोन</label><br>
+    <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc;">
+  </div>
 
-  <label for="email">ईमेल</label>
-  <input type="email" id="email" name="email" required>
+  <div style="flex: 1 1 100%;">
+    <label for="email">ईमेल</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc;">
+  </div>
 
-  <button type="submit">सबमिट करा</button>
+  <div style="flex: 1 1 100%; text-align: center;">
+    <button type="submit" style="padding: 0.6rem 1.2rem; border-radius: 6px; background-color: #1976d2; color: white; border: none;">सबमिट करा</button>
+  </div>
 </form>
+
 
          
  
