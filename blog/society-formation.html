@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Society Redevelopment Updates – PMC Selection</title>
+  <meta name="description" content="Learn how our society selected a Project Management Consultant for redevelopment. Watch the video featuring Merit Housing and local corporator Baba Dhumal.">
+  <meta name="keywords" content="society redevelopment, PMC, project management consultant, cooperative housing, Merit Housing, Baba Dhumal">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: rgb(38, 44, 57);
+    }
+
+    .documents-section {
+      background-image: url('/images/bvb-min.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .documents-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255,255,255,0.8);
+      z-index: -1;
+    }
+
+    .documents-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: rgb(160, 0, 64);
+      text-transform: uppercase;
+    }
+
+    .documents-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .document-category {
+      margin-bottom: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .document-category input[type="checkbox"] {
+      display: none;
+    }
+
+    .document-category label {
+      display: block;
+      padding: 18px 24px;
+      background-color: rgb(160, 0, 64);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .document-category label:hover {
+      background-color: rgb(130, 0, 50);
+    }
+
+    .doc-items {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: white;
+      padding: 0 24px;
+    }
+
+    .document-category input[type="checkbox"]:checked ~ .doc-items {
+      max-height: 1500px;
+      padding: 20px 24px;
+    }
+
+    .doc-items p {
+      margin-bottom: 16px;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    iframe {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .documents-title {
+        font-size: 2rem;
+      }
+
+      .doc-items p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="documents-section">
+    <div class="documents-container">
+      <h1 class="documents-title">Society Redevelopment Updates</h1>
+
+      <div class="document-category">
+        <input type="checkbox" id="blog-toggle" checked>
+        <label for="blog-toggle">PMC Selection & Guest Felicitation – Watch Now</label>
+
+        <div class="doc-items">
+          <p>
+            Welcome to our society's official YouTube channel and blog. Here, we regularly share essential updates for housing societies undergoing or planning for redevelopment.
+          </p>
+
+          <p>
+            Redevelopment is a complex and highly regulated process, and the role of a Project Management Consultant (PMC) is critical in ensuring its success. In this video, we cover how our society evaluated and appointed <strong>Merit Housing Redevelopment Consultants</strong> as our official PMC.
+          </p>
+
+          <p>
+            The selection process was conducted transparently and strictly followed the legal framework and guidelines provided by the <strong>Cooperative Department, Government of India</strong>. Merit Housing was chosen for their deep experience, technical knowledge, and community-first approach.
+          </p>
+
+          <p>
+            To honor this significant milestone, we were delighted to have our local corporator, <strong>Mr. Baba Dhumal</strong>, join us and felicitate the Merit Housing team. His presence and encouragement have boosted our confidence in this journey.
+          </p>
+
+          <!-- YouTube Video Embed -->
+          <div style="margin: 30px 0; text-align: center;">
+            <iframe width="100%" height="415" src="https://www.youtube.com/embed/JSJU-mQ3EqY"
+              title="Society Redevelopment PMC Selection"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+
+          <p>
+            The video gives you a complete walkthrough of why PMC selection is so important, how to approach it, and what qualities to look for in a consultant. It’s a must-watch for every society member looking to ensure a smooth and legally compliant redevelopment.
+          </p>
+
+          <p>
+            Stay connected with us for more updates, insights, and interviews as we progress with our redevelopment project. We're committed to transparency, legality, and community empowerment.
+          </p>
+
+          <p>
+            <strong>Don’t forget to subscribe to our YouTube channel for real-time updates!</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
