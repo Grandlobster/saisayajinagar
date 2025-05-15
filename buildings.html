@@ -154,27 +154,121 @@
     let scrollIndex = 0;
 
     const buildingData = {
-        A: { secretary: "Alice", chairman: "Alan", treasurer: "Amanda", residents: [{ flat: '101', owner: 'Owner A1' }, { flat: '102', owner: 'Owner A2' }, { flat: '103', owner: 'Owner A3' }] },
-        B: { secretary: "Brian", chairman: "Bella", treasurer: "Ben", residents: [{ flat: '201', owner: 'Owner B1' }, { flat: '202', owner: 'Owner B2' }, { flat: '203', owner: 'Owner B3' }] },
-        E: { secretary: "Secretary E", chairman: "Chairman E", treasurer: "Treasurer E", residents: [
+        A: { secretary: "Alice", chairman: "Alan", treasurer: "Amanda", residents: [[
+  { flat: '1', owner: 'सौ. बबिताबाई आ. ओव्हाळ' },
+  { flat: '2', owner: 'श्री. अविनाश द. पासलकर' },
+  { flat: '3', owner: 'श्री. दिलीप न. यचार' },
+  { flat: '4', owner: 'श्री. अविनाश स. मालुंजकर' },
+  { flat: '5', owner: 'श्री. निलेश ब्रि. राठोड' },
+  { flat: '6', owner: 'श्री. विशाल ब. शिंदे' },
+  { flat: '7', owner: 'श्री. विलास वि. खुळे' },
+  { flat: '8', owner: 'श्री. उत्तम ज. दरेकर' },
+  { flat: '9', owner: 'श्री. विलास कडू' },
+  { flat: '10', owner: 'श्री. अनंता म. जनगाडे' },
+  { flat: '11', owner: 'श्री. हरिश्चंद्र शि. कोंढरे' },
+  { flat: '12', owner: 'श्री. सुनिल प्र. खेतल' },
+  { flat: '13', owner: 'श्री विजय दि सोंडकर' },
+  { flat: '14', owner: 'सौ. स्नेहांकिता प्र. तटकरे' },
+  { flat: '15', owner: 'श्रीमती सीमा दि. सांगळे' },
+  { flat: '16', owner: 'सौ. उमा ओझा' }
+]
+] },
+        B: { secretary: "Brian", chairman: "Bella", treasurer: "Ben", residents: [
+  { flat: '01', owner: 'श्री. दिपक कालिदास साळवे' },
+  { flat: '02', owner: 'श्री आकाश विद्या मुसळे' },
+  { flat: '03', owner: 'श्री. शेखर हरिदास धुमाळ' },
+  { flat: '04', owner: 'श्री. किरण हरिदास धुमाळ' },
+  { flat: '05', owner: 'श्री. सुग्रीव नागनाथ शिंदे' },
+  { flat: '06', owner: 'श्री. किरण सुग्रीव शिंदे' },
+  { flat: '07', owner: 'श्री. शिरीष विश्वनाथ महाशब्दे' },
+  { flat: '08', owner: 'श्री. सुधीर किसनराव सापधारे' },
+  { flat: '09', owner: 'श्री. साहेबराव धारू चौधरी' },
+  { flat: '10', owner: 'सौ. भारती शेखर धुमाळ' },
+  { flat: '11', owner: 'श्री. अनंत सिताराम रेवाळे' },
+  { flat: '12', owner: 'श्री. दिलीप मधुकर जानोरकर' },
+  { flat: '13', owner: 'श्री. किरण हरिदास धुमाळ' },
+  { flat: '14', owner: 'श्री. जगदीश लक्ष्मण वाळजे' },
+  { flat: '15', owner: 'श्री. संदेश गणपत उत्तेकर' },
+  { flat: '16', owner: 'श्री. रमेश दत्तात्रय बारवकर' }
+]
+ },
+        C: { secretary: "Brian", chairman: "Bella", treasurer: "Ben", residents:[
+    { flat:'01',owner:'श्री. कांताराम शिर्के'},
+  { flat: '02', owner: 'श्री. शांताराम शिर्के ' },
+  { flat: '03', owner: 'सौ. सुनंदा देशपांडे' },
+  { flat: '04', owner: 'श्री. सुहास देशपांडे' },
+  { flat: '05', owner: ' श्री. सतिश कोड़ा ' }
+  { flat: '06', owner: 'श्री. रचे गोमा' },
+  { flat: '07', owner: 'श्री. रवि गोसावी' },
+  { flat: '08', owner: 'श्रीमती अर्थमा तीसकर' },
+  { flat: '09', owner: 'श्री. महादेव खैरे' },
+  { flat: '10', owner: 'श्री. नारायण झेंडे ' },
+  { flat: '12', owner: 'श्री. छगन काकड' },
+  { flat: '12', owner: 'श्री. दत्तानंव बबन झोरे' },
+  { flat: '13', owner: 'श्री. सुहास शेंडे' },
+  { flat: '14', owner: 'श्री. सुहास शेंडे' },
+  { flat: '15', owner: 'श्री. अतुल बनसोडे' },
+  { flat: '16', owner: 'श्री. शिवराम आगवणे' }
+  
+]
+},
+         D: { secretary: "Brian", chairman: "Bella", treasurer: "Ben", residents:[
+  { flat: '1', owner: 'Mr. RAJENDRA LANDGE' },
+  { flat: '2', owner: 'MR. GANESH N. BAVDHANE' },
+  { flat: '3', owner: 'Mr. S. B. MURMURE' },
+  { flat: '4', owner: 'Mr. S. P. DESAI' },
+  { flat: '5', owner: 'MR. SANTOSH B. ZORE' },
+  { flat: '6', owner: 'Mr. D. P. SHINDE' },
+  { flat: '7', owner: 'Mr. S. D. DIXIT' },
+  { flat: '8', owner: 'Mr. S. N. KURLEKAR' },
+  { flat: '9', owner: '' }, // No owner mentioned
+  { flat: '10', owner: 'Mr. D. K. PAWAR' },
+  { flat: '11', owner: 'Mr. M. S. KOLGE' },
+  { flat: '12', owner: 'Mr. M. R. PATIL' },
+  { flat: '13', owner: 'Mr. R. C. PARANJAPE' },
+  { flat: '14', owner: 'Mrs. S. S. KEDARI' },
+  { flat: '15', owner: 'SACHIN B. KUMBH' },
+  { flat: '16', owner: 'Mr. Vikram Singh B. Thakur' }
+]
+},
+        E: { secretary: "Mr.Sudhir Kadam", chairman: "Mr.Manik Lawande", treasurer: "Mr.Yogesh Kulkarni", residents: [
             { flat: '1', owner: 'Mr. M. M. LAWANDE' },
             { flat: '2', owner: 'Mr. M. M. LAWANDE' },
             { flat: '3', owner: 'Mrs. S. S. SURDIKAR' },
             { flat: '4', owner: 'Mr. A. R. RAWADE' },
             { flat: '5', owner: 'Mr. V. P. KOKAJE' },
             { flat: '6', owner: 'Mr. B. V. JOGALE' },
-            { flat: '7', owner: 'Mr. S. R. BHATKHANDE' },
+            { flat: '7', owner: 'Mr. S. R. BHATKHANDE'},
             { flat: '8', owner: 'Mr. S. P. KHATAVKAR' },
             { flat: '9', owner: 'Mr. & Mrs. GUMPHALWAR' },
-            { flat: '10', owner: 'Sunita Pandurang Shevkan' },
+            { flat: '10', owner: 'Mrs.Sunita Pandurang Shevkari' },
             { flat: '11', owner: 'Mr. S. M. OGALE' },
             { flat: '12', owner: 'Mr. S. G. KADAM' },
             { flat: '13', owner: 'Mr. S. R. LAKHE' },
             { flat: '14', owner: 'Mr. S. P. KULKARNI' },
-            { flat: '15', owner: 'Perfect Pest Cont' },
-            { flat: '16', owner: 'B. D. SUTAR' },
-            { flat: '17', owner: 'Miss M. Oza' }
-        ] }
+            { flat: '15', owner: 'B. D. SUTAR' },
+            { flat: '16', owner: 'Mr.Chavan' }
+            
+        ] },
+         F: { secretary: "Brian", chairman: "Bella", treasurer: "Ben", residents:[
+  { flat: '1', owner: 'Mr. P. S. SONAR' },
+  { flat: '2', owner: 'Sou. T. B. SHELAR' },
+  { flat: '3', owner: 'Mr. CHETAN S. DESAR' },
+  { flat: '4', owner: 'Mr. Prashant Nigade' },
+  { flat: '5', owner: 'Mr. SANJAY L. CHHATTANI' },
+  { flat: '6', owner: 'D.S.S. MOKADAM' },
+  { flat: '7', owner: 'Mr. V. S. ANGRE' },
+  { flat: '8', owner: 'Mr. D. L. MUKNAK' },
+  { flat: '9', owner: 'Mr. V. S. ANGRE' },
+  { flat: '10', owner: 'Miss. D. D. JOSHI' },
+  { flat: '11', owner: 'सौ. रोहिणी सतोष बोडके JABARE' },
+  { flat: '13', owner: 'Mr. S. C. DHORE' },
+  { flat: '14', owner: 'Sachin Dhore' },
+  { flat: '15', owner: 'Mr. R. H. MANDAVKAR' },
+  { flat: '16', owner: '' } // No name provided
+]
+[]}
+        
     };
 
     window.addEventListener('wheel', (e) => {
