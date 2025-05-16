@@ -154,7 +154,7 @@
     let scrollIndex = 0;
 
     const buildingData = {
-        A: { secretary: "Alice", chairman: "Alan", treasurer: "Amanda",certificate:"documents/A.jpeg", residents: [
+        A: { secretary: "Alice", chairman: "Alan", treasurer: "Amanda", residents: [
   { flat: '1', owner: 'सौ. बबिताबाई आ. ओव्हाळ' },
   { flat: '2', owner: 'श्री. अविनाश द. पासलकर' },
   { flat: '3', owner: 'श्री. दिलीप न. यचार' },
@@ -299,7 +299,7 @@
                 secretaryName.textContent = buildingData[name].secretary;
                 chairmanName.textContent = buildingData[name].chairman;
                 treasurerName.textContent = buildingData[name].treasurer;
-                document.getElementById('buildingDocument').href = buildingData[name].document;
+               
                 residentsTable.innerHTML = '<tr><th>Flat No</th><th>Owner</th></tr>';
                 buildingData[name].residents.forEach(resident => {
                     const row = document.createElement('tr');
